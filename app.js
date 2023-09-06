@@ -13,7 +13,7 @@ const app = express();
 var fs = require('fs');
 const path = require('path');
 var cors = require('cors')
-const port = 9080;
+const port = 80;
 var public = path.join(__dirname, 'public');
 
 //app.use(cors());
