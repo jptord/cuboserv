@@ -5,11 +5,6 @@
 Front sencillo para comunicarse con el proceso remoto del cubo con NodeJS+17
 
 
-```
-linux EXIF_BIN=/opt/exiftool/exiftool
-windows EXIF_BIN=c:\exiftool\exiftool.exe
-```
-
 ## Instalación
 
 ```
