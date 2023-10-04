@@ -3,7 +3,9 @@ var udp = require('dgram');
 var tasks=[];
 var timeouts=[];
 var client = udp.createSocket('udp4');
-
+client.bind(10000, () => {
+    //client.addMembership('172.20.50.148');
+  });
 var ipServer = "172.20.1.163";
 //var ipServer = "172.20.3.97";
 var winPort = 10000;
@@ -64,8 +66,9 @@ var tiempoespera = function (task,res){
             tasks.splice(index,1);
             res.end(JSON.stringify({ estado:'err', mensaje: 'no se puede establecer conexión con el servidor' }));
         }
-    } ,2000);
+    } ,3000);
 }
+
 var send2UDP = function (msg,ip,port,res){
     console.log(`Enviando comando ...`);
     res.setHeader('Content-Type', 'application/json');
